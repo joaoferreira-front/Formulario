@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário de Inscrição</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 550px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    fieldset {
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #ff6600;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    button {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e65c00;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="#" method="get" autocomplete="on">
+    <h1>Formulário de Inscrição para o Evento</h1>
+
+    <fieldset>
+      <legend>Campos obrigatórios:</legend>
+
+      <label for="iname">Nome completo:</label>
+      <input type="text" name="name" id="iname" required />
+
+      <label for="iemail">E-mail:</label>
+      <input type="email" name="email" id="iemail" required />
+
+      <label for="idate">Data de nascimento:</label>
+      <input type="date" name="date" id="idate" required />
+    </fieldset>
+
+    <fieldset>
+      <legend>Turno de participação:</legend>
+      <p>Qual turno você prefere participar?</p>
+
+      <label><input type="radio" name="turno" value="manha" required /> Manhã</label>
+      <label><input type="radio" name="turno" value="tarde" /> Tarde</label>
+      <label><input type="radio" name="turno" value="noite" /> Noite</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Certificado:</legend>
+      <label>
+        <input type="checkbox" name="certificado" value="sim" id="icertificado" />
+        Desejo receber certificado de participação
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Deixe um comentário:</legend>
+      <label for="icomentario">Comentário:</label>
+      <textarea name="comentario" id="icomentario" cols="30" rows="3"></textarea>
+    </fieldset>
+
+    <p>
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpar</button>
+    </p>
+  </form>
+
+</body>
+</html>
